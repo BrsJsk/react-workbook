@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import 'antd/dist/antd.css';
 import { Link, Route, Switch, useLocation } from 'react-router-dom';
 import SimpleCardsList from './Pages/SimpleCardsList/SimpleCardsList';
@@ -7,12 +7,14 @@ import SearchBar from './Pages/SearchBar/SearchBar';
 import Movies from './Pages/Movies/Movies';
 import {
   AppstoreOutlined,
+  CheckOutlined,
   IdcardOutlined,
   MailOutlined,
   SearchOutlined,
 } from '@ant-design/icons';
 import { Menu } from 'antd';
-import { useTransition, animated } from 'react-spring';
+import { animated, useTransition } from 'react-spring';
+import Todo from './Pages/Todo/Todo';
 
 function App() {
   const location = useLocation();
@@ -40,6 +42,10 @@ function App() {
         <Menu.Item key="movies" icon={<AppstoreOutlined />}>
           <Link to="/movies">Movies</Link>
         </Menu.Item>
+
+        <Menu.Item key="todo" icon={<CheckOutlined />}>
+          <Link to="/todo">Todo</Link>
+        </Menu.Item>
       </Menu>
 
       {transitions.map(({ item, props, key }) => (
@@ -55,6 +61,10 @@ function App() {
 
             <Route path="/movies">
               <Movies />
+            </Route>
+
+            <Route path="/todo">
+              <Todo />
             </Route>
 
             <Route path="/">
