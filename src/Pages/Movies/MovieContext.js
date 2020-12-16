@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createContext } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
 export const MovieContext = createContext();
 
@@ -26,10 +26,6 @@ export const MovieProvider = (props) => {
         setLoading(false);
       });
   };
-
-  useEffect(() => {
-    console.log(movies);
-  }, [movies]);
 
   return (
     <MovieContext.Provider value={[loading, movies]}>

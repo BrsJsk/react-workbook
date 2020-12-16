@@ -2,17 +2,18 @@ import React from 'react';
 import './Todo.css';
 import TodoHeader from './TodoHeader';
 import PageAbsoluteWrapper from '../../components/PageAbsoluteWrapper';
-import TodoCard from './TodoCard';
+import { TodoProvider } from './TodoContext';
+import TodoList from './TodoList';
 
 function Todo(props) {
   return (
     <PageAbsoluteWrapper>
       <div className="todo_wrapper">
-        <TodoHeader />
+        <TodoProvider>
+          <TodoHeader />
 
-        <TodoCard />
-        <TodoCard />
-        <TodoCard />
+          <TodoList />
+        </TodoProvider>
       </div>
     </PageAbsoluteWrapper>
   );

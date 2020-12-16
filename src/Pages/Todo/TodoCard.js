@@ -1,7 +1,7 @@
 import React from 'react';
 
-function TodoCard(props) {
-  return <div className="todo_card">TOdo!!</div>;
+function TodoCard({ todo }) {
+  return <div className="todo_card">{todo}</div>;
 }
 
 export default TodoCard;
