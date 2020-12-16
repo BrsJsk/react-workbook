@@ -5,6 +5,7 @@ import { TodoContext } from './TodoContext';
 function TodoList() {
   const [todos, setTodos] = useContext(TodoContext);
 
+  // TODO: Animation
   return (
     <>
       {todos?.map((todo, index) => (
