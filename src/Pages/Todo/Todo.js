@@ -5,7 +5,7 @@ import PageAbsoluteWrapper from '../../components/PageAbsoluteWrapper';
 import { TodoProvider } from './TodoContext';
 import TodoList from './TodoList';
 
-function Todo(props) {
+function Todo() {
   return (
     <PageAbsoluteWrapper>
       <div className="todo_wrapper">

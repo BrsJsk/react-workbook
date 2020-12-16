@@ -3,7 +3,7 @@ import TodoCard from './TodoCard';
 import { TodoContext } from './TodoContext';
 
 function TodoList() {
-  const [todos, setTodos] = useContext(TodoContext);
+  const [todos] = useContext(TodoContext);
 
   // TODO: Animation
   return (
